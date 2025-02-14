@@ -57,19 +57,61 @@ body {
 
 /* Buttons styling */
 #start-screen button,
-#game-over-screen button {
+#game-over-screen button,
+#controls button {
     font-family: 'Press Start 2P', cursive;
     font-size: 16px;
     padding: 10px 20px;
-    background: #ff6f91;
-    color: #fff;
+    background: #ff6f91; /* Main button color */
+    color: #fff; /* Text color */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    transition: background 0.3s; /* Smooth transition for hover effect */
 }
 
+/* Hover effects */
 #start-screen button:hover,
-#game-over-screen button:hover {
-    background: #ff4d6d;
+#game-over-screen button:hover,
+#controls button:hover {
+    background: #ff4d6d; /* Darker shade on hover */
+}
+
+/* Specific styles for control buttons */
+#controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#controls button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    background: #ff6f91; /* Same color as other buttons */
+    border-radius: 5px;
+    transition: background 0.3s; /* Smooth transition for hover effect */
+}
+
+#controls button:hover {
+    background: #ff4d6d; /* Darker shade on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    #heading {
+        font-size: 30px; /* Smaller font size for mobile */
+    }
+
+    #canvas {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #controls button {
+        margin: 5px;
+        padding: 10px;
+        font-size: 16px; /* Adjust button size */
+    }
 }
